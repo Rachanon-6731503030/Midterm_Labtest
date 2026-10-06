@@ -28,6 +28,63 @@ These notes summarize the implementation and are intended to help the student pr
 - **Scope and limitations:** The brief requires a REST API and curl/HTTP testing; it does not require a browser client, so CORS was not added. The deployed Worker has no authentication, so its write endpoints are publicly reachable. The booking conflict rule is enforced by API write statements, not by a standalone database exclusion constraint. Production GET/POST/PATCH/DELETE affect the Cloudflare D1 database.
 - **Checkpoint evidence:** No pre-30-minute commit or screenshot was found in the project folder. The current review and current screenshots cannot be represented as that historical checkpoint. The instructor should be told this honestly, and any snapshot found elsewhere should be submitted with its actual provenance.
 
-## Submission decision
+## Quality Gate Checklist
 
-**DO NOT SUBMIT YET.** A pre-30-minute first-version commit or screenshot is required by the brief/rubric, but no such evidence was present in the supplied folder during this review; this review cannot recreate or claim a historical checkpoint. Include the actual checkpoint if it was saved elsewhere, and confirm the student can explain the work. Do not present the current post-review version as the pre-30-minute snapshot.
+Working copy of the checklist from `quality_gate.md`. Evidence-based items are checked where verified. Personal understanding and ownership items remain unchecked for the student to confirm honestly.
+
+### 1. Purpose
+
+- [x] My API solves the stated equipment-booking problem.
+- [x] My routes, request bodies, responses, and status codes match the common API contract.
+- [ ] I have met the required deliverables and submission instructions.
+- [x] I have not added unrelated features that reduce the time available for required work.
+
+### 2. Reliability
+
+- [x] My equipment data and booking data are saved and retrieved consistently.
+- [x] Creating or updating a booking cannot create an overlap for the same equipment.
+- [x] `equipmentId` is checked against existing equipment.
+- [x] The API handles invalid requests without crashing.
+
+### 3. Course Context
+
+- [x] My work follows the instructor's task, the API contract, and the permitted technology stack.
+- [ ] I understand which parts I implemented myself and which parts were assisted by AI or other permitted resources.
+- [x] I used only permitted sources and recorded significant AI assistance in `AI_LOG.md`.
+- [ ] I can identify the important files, routes, schema, and commands needed to run my work.
+
+### 4. Reasoning
+
+- [ ] I can explain why I selected each important status code, especially `400`, `404`, and `409`.
+- [ ] I can explain how my overlap check works for both create and update operations.
+- [ ] I can distinguish required behaviour from optional design choices.
+- [ ] I can explain any limitations or assumptions in my implementation.
+
+### 5. Execution Value
+
+- [x] The API can be run by following the instructions in `README.md`.
+- [x] The equipment endpoint and all required booking CRUD endpoints work.
+- [x] I tested the API with `curl` or another HTTP client and recorded the results.
+- [x] I have focused effort on the required API, validation, testing, and documentation.
+
+### 6. Accuracy
+
+- [x] Booking fields, dates, IDs, and responses contain the correct values.
+- [x] I validate that `startAt` is before `endAt`.
+- [x] Every error response uses JSON in the required `{ "error": "..." }` format.
+- [x] I use SQL/D1 parameter binding and do not concatenate request data into SQL statements.
+
+### 7. Delivery Quality
+
+- [x] My source code is runnable and my README includes clear run instructions.
+- [x] My API contract and brief schema/ERD are included.
+- [x] I have included any CORS configuration only if I chose to use a browser-based client.
+- [x] I have evidence for at least five test cases, including successful requests and error cases.
+- [ ] My files are named clearly and are complete enough for marking.
+
+### 8. You Own It
+
+- [ ] I can explain every important route, validation rule, database query, and test result in my own words.
+- [x] My `AI_LOG.md` truthfully records important prompts, what I used, and how I checked it.
+- [ ] I can explain what I changed after the Quality Gate review and why.
+- [ ] I am ready to answer follow-up questions about my design and implementation.

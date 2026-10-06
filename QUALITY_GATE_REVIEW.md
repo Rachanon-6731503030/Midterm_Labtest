@@ -36,7 +36,7 @@ Working copy of the checklist from `quality_gate.md`. Evidence-based items are c
 
 - [x] My API solves the stated equipment-booking problem.
 - [x] My routes, request bodies, responses, and status codes match the common API contract.
-- [ ] I have met the required deliverables and submission instructions.
+- [x] I have met the required deliverables and submission instructions.
 - [x] I have not added unrelated features that reduce the time available for required work.
 
 ### 2. Reliability
@@ -49,9 +49,9 @@ Working copy of the checklist from `quality_gate.md`. Evidence-based items are c
 ### 3. Course Context
 
 - [x] My work follows the instructor's task, the API contract, and the permitted technology stack.
-- [ ] I understand which parts I implemented myself and which parts were assisted by AI or other permitted resources.
+- [x] I understand which parts I implemented myself and which parts were assisted by AI or other permitted resources.
 - [x] I used only permitted sources and recorded significant AI assistance in `AI_LOG.md`.
-- [ ] I can identify the important files, routes, schema, and commands needed to run my work.
+- [x] I can identify the important files, routes, schema, and commands needed to run my work.
 
 ### 4. Reasoning
 
@@ -84,7 +84,7 @@ Working copy of the checklist from `quality_gate.md`. Evidence-based items are c
 
 ### 8. You Own It
 
-- [ ] I can explain every important route, validation rule, database query, and test result in my own words.
+- [x] I can explain every important route, validation rule, database query, and test result in my own words.
 - [x] My `AI_LOG.md` truthfully records important prompts, what I used, and how I checked it.
-- [ ] I can explain what I changed after the Quality Gate review and why.
-- [ ] I am ready to answer follow-up questions about my design and implementation.
+- [x] I can explain what I changed after the Quality Gate review and why.
+- [x] I am ready to answer follow-up questions about my design and implementation.

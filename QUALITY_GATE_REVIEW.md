@@ -55,10 +55,10 @@ Working copy of the checklist from `quality_gate.md`. Evidence-based items are c
 
 ### 4. Reasoning
 
-- [ ] I can explain why I selected each important status code, especially `400`, `404`, and `409`.
-- [ ] I can explain how my overlap check works for both create and update operations.
+- [x] I can explain why I selected each important status code, especially `400`, `404`, and `409`.
+- [x] I can explain how my overlap check works for both create and update operations.
 - [ ] I can distinguish required behaviour from optional design choices.
-- [ ] I can explain any limitations or assumptions in my implementation.
+- [x] I can explain any limitations or assumptions in my implementation.
 
 ### 5. Execution Value
 
